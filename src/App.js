@@ -1,23 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import EditableBlock from './components/EditableBlock';
+import EditablePage from './components/EditablePage';
+import SelectMenu from './components/SelectMenu';
+import React from 'react';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <EditableBlock/>
+      <EditablePage/>
+      <SelectMenu/>
     </div>
   );
 }
