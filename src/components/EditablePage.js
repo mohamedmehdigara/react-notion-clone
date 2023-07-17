@@ -1,6 +1,9 @@
+import React from "react";
+import { v4 as uuidv4 } from "uuid";
+import { setCaretToEnd } from "./caretUtils";
+import EditableBlock from "./EditableBlock";
 
-
-const initialBlock = { id: uid(), html: "", tag: "p" };
+const initialBlock = { id: uuidv4(), html: "", tag: "p" };
 
 class EditablePage extends React.Component {
   constructor(props) {
@@ -24,7 +27,7 @@ class EditablePage extends React.Component {
   }
 
   addBlockHandler(currentBlock) {
-    const newBlock = { id: uid(), html: "", tag: "p" };
+    const newBlock = { id: uuidv4(), html: "", tag: "p" };
     const blocks = this.state.blocks;
     const index = blocks.map((b) => b.id).indexOf(currentBlock.id);
     const updatedBlocks = [...blocks];
